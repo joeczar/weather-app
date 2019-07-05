@@ -12,20 +12,16 @@ const darkSky = (lat, long, callback) => {
       callback(body.error, undefined);
     } else {
       const dataCurrent = body.currently;
-      //const dataDaily = body.daily.data[0].summary;
+      const dataDaily =  body.daily.data[0];
       const weatherData = {
-        
-        dataDaily: body.daily.data[0].summary,
-        dailyHigh: body.daily.data[0].temperatureHigh,
-        dailyLow: body.daily.data[0].temperatureLow,
+        dataDaily: dataDaily.summary,
+        dailyHigh: dataDaily.temperatureHigh,
+        dailyLow: dataDaily.temperatureLow,
         currentTemp: dataCurrent.temperature,
         percipitation: dataCurrent.precipProbability
       };
 
-      callback(
-        undefined,
-         weatherData
-      );
+      callback(undefined, weatherData);
     }
   });
 };
