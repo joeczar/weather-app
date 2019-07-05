@@ -23,7 +23,7 @@ app.use(express.static(publicDir));
 
 app.get("", (req, res) => {
   res.render("index", {
-    title: "Wetter",
+    title: "Weather",
     name: "Joe Czarnecki"
   });
 });
@@ -37,7 +37,7 @@ app.get("/about", (req, res) => {
 
 app.get("/help", (req, res) => {
   res.render("help", {
-    title: "Hilfe",
+    title: "Help",
     name: "Joe Czarnecki",
     helpMessage: "Only you can help yourself."
   });

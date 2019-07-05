@@ -3,7 +3,7 @@ const request = require("request");
 
 const darkSky = (lat, long, callback) => {
   const apiKey = "cb3bd684c5147594a33daa61c14c185b";
-  const url = `https://api.darksky.net/forecast/${apiKey}/${long},${lat}?units=si&lang=de`;
+  const url = `https://api.darksky.net/forecast/${apiKey}/${long},${lat}?units=si`;
 
   request({ url, json: true }, (error, { body }) => {
     if (error) {
@@ -15,9 +15,9 @@ const darkSky = (lat, long, callback) => {
       const dataDaily = body.daily.data[0].summary;
       callback(
         undefined,
-        ` ${dataDaily} Es ist ${dataCurrent.temperature} grad, mit eine ${
+        ` ${dataDaily} It's ${dataCurrent.temperature} degrees, with a ${
           dataCurrent.precipProbability
-        } prozent Niederschlagswarscheinlichkeit.`
+        } percent chance of rain.`
       );
     }
   });
