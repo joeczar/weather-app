@@ -1,0 +1,17 @@
+<footer>
+  <div class="ui container">
+    <div>
+    <p id="footer-name">Created by {{name}}</p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".ui.toggle.button").click(function() {
+          $(".mobile.only.grid .ui.vertical.menu").toggle(100);
+        });
+        $(".ui.dropdown").dropdown();
+      });
+    </script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{title}}</title>
+  </head>
+  <body>
+
+    {{>header}}
+    <div class="ui massive message inverted">
+      <div class="ui container">
+        <h1 class="ui huge header inverted">{{title}}</h1>
+
+      </div>
+    </div>
+    <div class="ui container">
+      <div class="ui segment inverted">
+        <h2 class="ui header">{{name}}, gettin it done.</h2>
+        <div class="ui grid">
+          <div class="row">
+            <div class="three wide column">
+              <img src="/img/joe-zoom-square.png" id="joe-zoom" class="ui small
+                circular spaced image">
+            </div>
+            <div class="thirteen wide column">
+              <p class="ui left spaced">
+                Born in Boulder, Colorado and raised on an Arabian Horse farm
+                I've gotten around. From Dock work in an Alaskan fish factory,
+                auto body mechanic in Monroe, Washington, then in Berlin a solo
+                guitarist, bassist, composer, producer, barista, bar tender,
+                english teacher, media educator, communications manager, project
+                developer and now web developer.
+                <br><br>
+                Rock 'n Roll!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{>footer}}
+
+  </body>
+</html>
