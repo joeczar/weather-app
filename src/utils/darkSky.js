@@ -12,12 +12,19 @@ const darkSky = (lat, long, callback) => {
       callback(body.error, undefined);
     } else {
       const dataCurrent = body.currently;
-      const dataDaily = body.daily.data[0].summary;
+      //const dataDaily = body.daily.data[0].summary;
+      const weatherData = {
+        
+        dataDaily: body.daily.data[0].summary,
+        dailyHigh: body.daily.data[0].temperatureHigh,
+        dailyLow: body.daily.data[0].temperatureLow,
+        currentTemp: dataCurrent.temperature,
+        percipitation: dataCurrent.precipProbability
+      };
+
       callback(
         undefined,
-        ` ${dataDaily} It's ${dataCurrent.temperature} degrees, with a ${
-          dataCurrent.precipProbability
-        } percent chance of rain.`
+         weatherData
       );
     }
   });
